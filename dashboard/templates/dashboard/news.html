@@ -1,0 +1,28 @@
+{% extends 'dashboard/base.html' %} 
+{% load static %} 
+{% block content %}
+
+<div class="container">
+  {% for value in data %}
+    <div class="row">
+
+      <div class="col-md-3">
+        <img class="img-fluid" src="{{ value.image }}" alt="">
+        </div>
+            <!-- {{ value|linebreaks }} -->
+            
+            <div class="col-md-9">
+              <a href = "{{value.url}}">
+              <h1>{{value.title}}</h1> 
+              </a>
+            <!-- <br>s -->
+            <h4>{{value.description}} </h4>
+            {{ value|linebreaks }}
+            </div>
+            <hr syle="width:10px;">
+            </div>
+
+    {% endfor %}
+  </div>
+
+{% endblock content %}
