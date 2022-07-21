@@ -276,4 +276,4 @@ def register(request):
     return render(request,'dashboard/register.html',context)
 
 def profile(request):    
-    return redirect("https://www.linkedin.com/in/ippatapu-venkata-srisurya/")
+    return redirect("https://ivsrisurya.github.io/portfolio/index.html")
